@@ -1,0 +1,566 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home</title>
+
+    <!-- ********|| STYLESHEETS STARTS ||******** -->
+    <style>
+        :root {
+            --primaryColor: #4677bb;
+            --secondaryColor: #e27e27;
+            --thirdColor: #efefef;
+            --textColor: #f8fbfd;
+            --lightColor: #f6f5f7;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .preloader {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            z-index: 999999;
+            background-color: #fff;
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.3s ease;
+        }
+
+        .preloader.inactive {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .preloader:after {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -.25em
+        }
+
+        .preloader:before {
+            content: '';
+            display: block;
+            height: 100%;
+        }
+
+        .preloader .content {
+            box-sizing: border-box;
+            animation: fadein 0.5s 1s linear forwards;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+            font-size: 0;
+            opacity: 0
+        }
+
+        .loader-line-mask {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 30px;
+            height: 60px;
+            margin-left: -30px;
+            margin-top: -30px;
+            overflow: hidden;
+            transform-origin: 30px 30px;
+            -webkit-mask-image: -webkit-linear-gradient(top, var(--primaryColor), rgba(0, 0, 0, 0));
+            mix-blend-mode: hard-light;
+            opacity: .8
+        }
+
+        .loader-line-mask .loader-line {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%
+        }
+
+        .loader-line-mask.one {
+            animation: rotate 1.6s infinite linear
+        }
+
+        .loader-line-mask.one .loader-line {
+            box-shadow: inset 0 0 0 8px var(--primaryColor);
+        }
+
+        .loader-line-mask.two {
+            animation: rotate 1.6s 0.8s infinite linear
+        }
+
+        .loader-line-mask.two .loader-line {
+            box-shadow: inset 0 0 0 8px var(--primaryColor);
+        }
+
+        @keyframes rotate {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg)
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes fadein {
+            0% {
+                opacity: 0
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
+    </style>
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <!-- ********|| STYLESHEETS ENDS ||******** -->
+    <!--[if gte IE 9]
+<style type="text/css"> .gradient{filter: none;}</style>
+<![endif]-->
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="content">
+            <div class="loader-circle"></div>
+            <div class="loader-line-mask one">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-mask two">
+                <div class="loader-line"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ********|| HEADER START ||******** -->
+    <header class="header">
+        <div class="top-heder">
+            <div class="container">
+                <div class="brand">
+                    <a href="index.html" class="logo">
+                        <img class="img-fluid" src="assets/images/logo.jpg" alt="" title="Brand">
+                    </a>
+                </div>
+                <div class="search">
+                    <div class="brand-name">APJ Abdul Kalam Youth Computer Education</div>
+                    <div class="sub-text">LEARN TODAY, LEAD TOMORROW</div>
+                </div>
+                <div class="hearder-options">
+                    <div class="my-account">
+
+                        <div class="dropdown">
+                                            <a href="javascript:void(0)" class="menu-link dropdown-toggle" data-toggle="dropdown"><i class="fad fa-fw fa-user"></i><span>Log In</span></a>
+                                            <div class="dropdown-menu">
+                                                <ul class="dropdown-menu-list">
+                                                    <li><a href="" class="dropdown-menu-item">Admin</a></li>
+                                                    <li><a href="" class="dropdown-menu-item">Franchise</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-navigation">
+            <div class="container">
+                <div class="navigation">
+                    <div class="responsive-action">
+                        <a href="javascript:void(0)" class="btn-menu"><i class="far fa-fw fa-bars"></i></a>
+                    </div>
+                    <div class="navigation-wrap">
+                        <ul class="navigation-menu">
+                            <li class="active"><a href="index.html" class="menu-link"><i
+                                        class="fad fa-fw fa-home"></i><span>HOME</span></a></li>
+                            <li class=""><a href="about-us.html" class="menu-link"><i
+                                        class="fad fa-fw fa-users"></i><span>ABOUT US</span></a></li>
+                            <li class=""><a href="courses.html" class="menu-link"><i
+                                        class="fad fa-fw fa-graduation-cap"></i><span>Courses</span></a></li>
+
+
+                                        <li class="dropdown">
+                                            <a href="javascript:void(0)" class="menu-link dropdown-toggle" data-toggle="dropdown"><i class="fad fa-fw fa-user-graduate"></i><span>Student Corner</span></a>
+                                            <div class="dropdown-menu">
+                                                <ul class="dropdown-menu-list">
+                                                    <li><a href="registration.html" class="dropdown-menu-item">New Registration</a></li>
+                                                    <li><a href="profile.html" class="dropdown-menu-item">View Profile</a></li>
+                                                    <li><a href="result.html" class="dropdown-menu-item">View Result</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        
+                           
+
+
+                            <li class=""><a href="franchise.html" class="menu-link"><i
+                                        class="fad fa-fw fa-user-crown"></i><span>Franchise</span></a></li>
+                            <li class=""><a href="centers.html" class="menu-link"><i
+                                        class="fad fa-fw fa-university"></i><span>Study Center</span></a></li>
+                            <li class=""><a href="gallery.html" class="menu-link"><i class="fad fa-fw fa-images"></i><span>Gallery</span></a></li>
+                            <li class=""><a href="contact-us.html" class="menu-link"><i
+                                        class="fad fa-fw fa-address-card"></i><span>Contact us</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-overlay"></div>
+    </header>
+    <!-- ********|| HEADER ENDS ||******** -->
+    
+
+
+
+    <!-- ********|| BANNER START ||******** -->
+
+    <section class="banner-sec">
+        <div id=owldemo1 class="owl-carousel owl-theme">
+            <div class="item">
+                <div class="banner-box">
+                    <img src="assets/images/banner-1.jpg" alt="">
+                    <div class="banner-text">
+                        <h1 class="banner-title">New courses</h1>
+                        <h5 class="banner-para">Don’t Let Just Anyone Into Your Home.</h5>
+                        <div class="shp-btn"><a href="#" class="item">contact Now</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="banner-box">
+                    <img src="assets/images/banner-2.jpg" alt="">
+                    <div class="banner-text">
+                        <h1 class="banner-title">New courses</h1>
+                        <h5 class="banner-para">Don’t Let Just Anyone Into Your Home.</h5>
+                        <div class="shp-btn"><a href="#" class="item">contact Now</a></div>
+                    </div>
+                </div>
+            </div>
+            <div class="item">
+                <div class="banner-box">
+                    <img src="assets/images/banner-3.jpg" alt="">
+                    <div class="banner-text">
+                        <h1 class="banner-title">New courses</h1>
+                        <h5 class="banner-para">Don’t Let Just Anyone Into Your Home.</h5>
+                        <div class="shp-btn"><a href="#" class="item">contact Now</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ********|| BANNER ENDS ||******** -->
+
+    <!-- ********|| Introduction START ||******** -->
+    <section class="intro-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="heading">
+                        <div class="sub-text">Welcome to</div>
+                        <div class="title">APJ Abdul Kalam Youth Computer Education</div>
+                    </div>
+                    <div class="des">
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut quasi, quidem nobis est
+                            necessitatibus reiciendis sed aperiam a alias. Saepe fugit perferendis, harum minima modi ex
+                            temporibus cumque perspiciatis voluptate, id cum suscipit voluptatem! Laboriosam voluptatem
+                            ratione voluptatibus, culpa commodi incidunt eius fugiat velit mollitia ea reiciendis iure
+                            quibusdam accusamus nulla blanditiis magnam qui consectetur cum temporibus facere illum nihil
+                            sequi alias libero. Facilis sapiente illo delectus temporibus aperiam, quos commodi eveniet sint
+                            odit labore accusantium consectetur sunt totam ratione aspernatur modi praesentium maiores
+                            quaerat tenetur veniam. Quisquam quasi, perspiciatis eum quo quam exercitationem facilis a,
+                            similique, expedita vero at accusantium quod dolorum soluta mollitia aut neque.
+                        </p>
+                    </div>
+                </div>
+              
+
+            </div>
+        </div>
+    </section>
+    <!-- ********|| Introduction ENDS ||******** -->
+
+    <!-- ********|| CATEGORY SECTION START ||******** -->
+    <section class="category-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 mb-4">
+                    <div class="title-box">
+                        <h3 class="title">OUR courses</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="item">
+                        <div class="item-wrap">
+                            <div class="item-img">
+                                <img class="img-fluid" src="assets/images/course-1.jpg">
+                            </div>
+                            <div class="item-content">
+                                <div class="item-title">Computer Courses</div>
+                                <div class="item-text">
+                                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis debitis fugiat
+                                    iusto, quidem aliquid minus quisquam consequuntur. Maiores, cupiditate aspernatur?
+                                </div>
+                                <div class="item-action"><a href="#" class="btn-action">view more</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="item">
+                        <div class="item-wrap">
+                            <div class="item-img">
+                                <img class="img-fluid" src="assets/images/course-2.jpg">
+                            </div>
+                            <div class="item-content">
+                                <div class="item-title">Vocational Courses</div>
+                                <div class="item-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                    Reiciendis debitis fugiat iusto, quidem aliquid minus quisquam consequuntur.
+                                    Maiores, cupiditate aspernatur?</div>
+                                <div class="item-action"><a href="#" class="btn-action">view more</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ********|| CATEGORY SECTION ENDS ||******** -->
+
+    <section class="special-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="special-content">
+                        <h2 class="heading">
+                            Chairman Message
+                        </h2>
+                        <div class="des">
+                          <div class="sub-text">Dear Student’s</div>  
+                            <p>
+                                
+
+I heartily welcome you on seeking admission in our training centre.
+You are likely to be imparted excellent coaching and guidance by dedicated and experienced faculty member ,so that, your theoretical and practical knowledge may be academically and professionally meaningful.
+Peveral careen and job oriented courses have also been introduced for the benefit of students in general and society in particular.Therefore, please utilize your precious time in personality development to the to the entire satisfaction of your parents and to attain name and fame for yourself . I expect your fullest cooperation to maintain discipline and decorum the institution.
+                            </p>
+                        </div>
+                        <div class="sub-text">Wishing you in every success life.</div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                   
+                        <div class="news-content">
+                            <div class="title">News &amp; Update</div>
+                            <marquee direction="up" class="news-crawler">
+                                <div class="item item-new">Practical training for July 2020-21 Batch students are going to start in the month of August, 2021</div>
+                                <div class="item item-new">Industrial visit is going to held on 17th  of August,2021 for July 2020-21 Batch students</div>
+                                <div class="item">Congratulation to Jan 2019 Batch students who all have placed in to Merlin Group Kolkata</div>
+                                <div class="item item-new">Congratulation to Jan 2019 Batch students who all have placed in to Steel Products Limited</div>
+                                <div class="item item-new">Congratulation to Jan 2020 Batch students who all have passed successfully</div>
+                                <div class="item">JUNE 2020 Batch students result will be published online</div>
+                                <div class="item item-new">Congratulation to 2K19JUNE and 2K20JAN Session students who all have placed in this pandemic situtaion</div>
+                                <div class="item item-new">Congratulation to July 2020 - 2021 students who all got placed</div>
+                                <div class="item">July Session admission is going on ! Hurry Up</div>
+                                <div class="item item-new">Admission Going On For Session 2021-22</div>
+                                <div class="item item-new">June - 2020 (2K20JUNE) batch result will be published soon</div>
+                                <div class="item">Best Nursing College In Bangalore</div>
+                                
+                                <div class="item item-new">Congratulation to Jan : 2018-19 batch for getting placed in renowned company</div>
+                                <div class="item">Hurry Up ! Few Seat Only Left</div>
+                            </marquee>
+                        </div>
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--    /* ********|| SPONSAR PART START||******** *-->
+    <section class="spon-sec">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div id=owldemo2 class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="img-box">
+                                <img class="img-fluid" src="assets/images/spon-1.jpg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img-box">
+                                <img class="img-fluid" src="assets/images/spon-2.jpg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img-box">
+                                <img class="img-fluid" src="assets/images/spon-3.jpg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img-box">
+                                <img class="img-fluid" src="assets/images/spon-4.jpg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img-box">
+                                <img class="img-fluid" src="assets/images/spon-5.jpg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img-box">
+                                <img class="img-fluid" src="assets/images/spon-6.jpg">
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="img-box">
+                                <img class="img-fluid" src="assets/images/spon-7.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--    /* ********|| SPONSAR PART END||******** *-->
+
+
+
+
+
+
+
+    
+    <!--    /* ********||FOOTER SECTION START||******** *-->
+    <footer class="foot-sec bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <div class="text-box">
+                        <a href="index.html"><img src="assets/images/footer-logo.png" title="logo" alt="..."></a>
+                        <ul class="foot-item">
+                            <li class="item-content"><a href="#" class="btn-action"><i class="fal fa-phone-alt"></i>Call
+                                    Now: 7872836400</a></li>
+                            <li class="item-content"><a href="#" class="btn-action">Student helpline No: 8927581756
+                                </a></li>
+                            <li class="item-content"><a href="#" class="btn-action">
+                                    Study centre or franchise: +917872835900</a></li>
+                            <li class="item-content"><a href="#" class="btn-action"><i
+                                        class="fal fa-envelope"></i>mgyceindia@gmail.com</a></li>
+                            <li class="item-content"><a href="#" class="btn-action"><i
+                                        class="fal fa-map-marker-alt"></i>B.F ROAD, BHANGAPOOL
+                                    ALIPURDUAR, WEST BENGAL</a></li>
+                        </ul>
+                    </div>
+                    <div class="icon-box">
+                        <ul class="item-icon">
+                            <li class="item-bar"><a href="#" class="icon-btn"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="item-bar"><a href="#" class="icon-btn"><i class="fab fa-twitter"></i></a></li>
+                            <li class="item-bar"><a href="#" class="icon-btn"><i class="fab fa-whatsapp"></i></a></li>
+                            <li class="item-bar"><a href="#" class="icon-btn"><i class="fab fa-pinterest-p"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="menu-box">
+                        <h5 class="item-title">Courses</h5>
+                        <ul class="menu-item">
+                            <li class="item-nav"><a href="courses.html" class="btn-nav">Computer Courses</a>
+                            </li>
+                            <li class="item-nav"><a href="courses.html" class="btn-nav">Vocation Courses</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="menu-box">
+                        <h5 class="item-title">Infomation</h5>
+                        <ul class="menu-item">
+                            <li class="item-nav"><a href="registration.html" class="btn-nav">Student Registration</a></li>
+                            <li class="item-nav"><a href="result.html" class="btn-nav">View Result</a></li>
+                            <li class="item-nav"><a href="profile.html" class="btn-nav">View Profile</a></li>
+                            <li class="item-nav"><a href="gallery.html" class="btn-nav">Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="menu-box">
+                        <h5 class="item-title">Useful links</h5>
+                        <ul class="menu-item">
+                            <li class="item-nav"><a href="about-us.html" class="btn-nav">About Us</a></li>
+                            <li class="item-nav"><a href="contact-us.html" class="btn-nav">Contact Us</a></li>
+                            <li class="item-nav"><a href="centers.html" class="btn-nav">Student Corner</a></li>
+                            <li class="item-nav"><a href="franchise.html" class="btn-nav">Franchise</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!--    /* ********||  FOOTER SECTION END||******** *-->
+    <!--    /* ********||  COPY RIGHT SECTION START||******** *-->
+    <section class="copy-right bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-box">
+                        <h6>© Copyright APJ Computer Education Center 2022 • All rights reserved</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--    /* ********||  COPY RIGHT SECTION END||******** *-->
+
+
+    <!-- ********|| STYLESHEETS STARTS ||******** -->
+    <link href="assets/lib/bootstrap4/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/lib/fontawesome5-all/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/owl/owl3.css">
+    <!--
+<link href="assets/lib/owl-carousel/owl.carousel.min.css" rel="stylesheet" type="text/css">
+<link href="assets/lib/owl-carousel/owl.theme.min.css" rel="stylesheet" type="text/css">
+-->
+    <link href="assets/lib/fancybox/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css">
+    <!-- ********|| STYLESHEETS ENDS ||******** -->
+    <!-- ********|| JAVASCRIPTS STARTS ||******** -->
+    <script type="text/javascript" src="assets/lib/jQuery/jquery-3.3.1.js"></script>
+    <script defer="defer" type="text/javascript" src="assets/lib/bootstrap4/popper.min.js"></script>
+    <script defer="defer" type="text/javascript" src="assets/lib/bootstrap4/bootstrap.js"></script>
+    <script src="assets/owl/owl-min.js"></script>
+    <!--<script defer="defer" type="text/javascript" src="assets/lib/owl-carousel/owl.carousel.min.js"></script>-->
+    <script defer="defer" type="text/javascript" src="assets/lib/fancybox/jquery.fancybox.min.js"></script>
+    <script defer="defer" type="text/javascript" src="assets/js/script.js"></script>
+    <script defer="defer" type="text/javascript" src="assets/js/products.js"></script>
+    <!-- ********|| JAVASCRIPTS ENDS ||******** -->
+    <!-- ********|| ONPAGE JAVASCRIPTS STARTS ||******** -->
+    <script defer="defer" type="text/javascript">
+        $(document).ready(function () {
+
+        });
+    </script>
+
+    <!-- ********|| ONPAGE JAVASCRIPTS ENDS ||******** -->
+</body>
+
+</html>

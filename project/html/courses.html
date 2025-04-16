@@ -1,0 +1,876 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Home</title>
+
+    <!-- ********|| STYLESHEETS STARTS ||******** -->
+    <style>
+        :root {
+            --primaryColor: #4677bb;
+            --secondaryColor: #e27e27;
+            --thirdColor: #efefef;
+            --textColor: #f8fbfd;
+            --lightColor: #f6f5f7;
+        }
+
+        img {
+            max-width: 100%;
+        }
+
+        .preloader {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            z-index: 999999;
+            background-color: #fff;
+            opacity: 1;
+            visibility: visible;
+            transition: all 0.3s ease;
+        }
+
+        .preloader.inactive {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .preloader:after {
+            content: '';
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+            margin-right: -.25em
+        }
+
+        .preloader:before {
+            content: '';
+            display: block;
+            height: 100%;
+        }
+
+        .preloader .content {
+            box-sizing: border-box;
+            animation: fadein 0.5s 1s linear forwards;
+            display: inline-block;
+            vertical-align: middle;
+            text-align: left;
+            font-size: 0;
+            opacity: 0
+        }
+
+        .loader-line-mask {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            width: 30px;
+            height: 60px;
+            margin-left: -30px;
+            margin-top: -30px;
+            overflow: hidden;
+            transform-origin: 30px 30px;
+            -webkit-mask-image: -webkit-linear-gradient(top, var(--primaryColor), rgba(0, 0, 0, 0));
+            mix-blend-mode: hard-light;
+            opacity: .8
+        }
+
+        .loader-line-mask .loader-line {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%
+        }
+
+        .loader-line-mask.one {
+            animation: rotate 1.6s infinite linear
+        }
+
+        .loader-line-mask.one .loader-line {
+            box-shadow: inset 0 0 0 8px var(--primaryColor);
+        }
+
+        .loader-line-mask.two {
+            animation: rotate 1.6s 0.8s infinite linear
+        }
+
+        .loader-line-mask.two .loader-line {
+            box-shadow: inset 0 0 0 8px var(--primaryColor);
+        }
+
+        @keyframes rotate {
+            0% {
+                -webkit-transform: rotate(0deg);
+                -moz-transform: rotate(0deg);
+                -ms-transform: rotate(0deg);
+                transform: rotate(0deg)
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+                -moz-transform: rotate(360deg);
+                -ms-transform: rotate(360deg);
+                transform: rotate(360deg)
+            }
+        }
+
+        @keyframes fadein {
+            0% {
+                opacity: 0
+            }
+
+            100% {
+                opacity: 1
+            }
+        }
+    </style>
+    <link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+    <!-- ********|| STYLESHEETS ENDS ||******** -->
+    <!--[if gte IE 9]
+<style type="text/css"> .gradient{filter: none;}</style>
+<![endif]-->
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="content">
+            <div class="loader-circle"></div>
+            <div class="loader-line-mask one">
+                <div class="loader-line"></div>
+            </div>
+            <div class="loader-line-mask two">
+                <div class="loader-line"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ********|| HEADER START ||******** -->
+    <header class="header">
+        <div class="top-heder">
+            <div class="container">
+                <div class="brand">
+                    <a href="index.html" class="logo">
+                        <img class="img-fluid" src="assets/images/logo.jpg" alt="" title="Brand">
+                    </a>
+                </div>
+                <div class="search">
+                    <div class="brand-name">APJ Abdul Kalam Youth Computer Education</div>
+                    <div class="sub-text">LEARN TODAY, LEAD TOMORROW</div>
+                </div>
+                <div class="hearder-options">
+                    <div class="my-account">
+
+                        <div class="dropdown">
+                                            <a href="javascript:void(0)" class="menu-link dropdown-toggle" data-toggle="dropdown"><i class="fad fa-fw fa-user"></i><span>Log In</span></a>
+                                            <div class="dropdown-menu">
+                                                <ul class="dropdown-menu-list">
+                                                    <li><a href="" class="dropdown-menu-item">Admin</a></li>
+                                                    <li><a href="" class="dropdown-menu-item">Franchise</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-navigation">
+            <div class="container">
+                <div class="navigation">
+                    <div class="responsive-action">
+                        <a href="javascript:void(0)" class="btn-menu"><i class="far fa-fw fa-bars"></i></a>
+                    </div>
+                    <div class="navigation-wrap">
+                        <ul class="navigation-menu">
+                            <li class=""><a href="index.html" class="menu-link"><i
+                                        class="fad fa-fw fa-home"></i><span>HOME</span></a></li>
+                            <li class=""><a href="about-us.html" class="menu-link"><i
+                                        class="fad fa-fw fa-users"></i><span>ABOUT US</span></a></li>
+                            <li class="active"><a href="courses.html" class="menu-link"><i
+                                        class="fad fa-fw fa-graduation-cap"></i><span>Courses</span></a></li>
+
+
+                                        <li class="dropdown">
+                                            <a href="javascript:void(0)" class="menu-link dropdown-toggle" data-toggle="dropdown"><i class="fad fa-fw fa-user-graduate"></i><span>Student Corner</span></a>
+                                            <div class="dropdown-menu">
+                                                <ul class="dropdown-menu-list">
+                                                    <li><a href="registration.html" class="dropdown-menu-item">New Registration</a></li>
+                                                    <li><a href="profile.html" class="dropdown-menu-item">View Profile</a></li>
+                                                    <li><a href="result.html" class="dropdown-menu-item">View Result</a></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        
+                           
+
+
+                            <li class=""><a href="franchise.html" class="menu-link"><i
+                                        class="fad fa-fw fa-user-crown"></i><span>Franchise</span></a></li>
+                            <li class=""><a href="centers.html" class="menu-link"><i
+                                        class="fad fa-fw fa-university"></i><span>Study Center</span></a></li>
+                                        <li class=""><a href="gallery.html" class="menu-link"><i class="fad fa-fw fa-images"></i><span>Gallery</span></a></li>
+                            <li class=""><a href="contact-us.html" class="menu-link"><i
+                                        class="fad fa-fw fa-address-card"></i><span>Contact us</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-overlay"></div>
+    </header>
+    <!-- ********|| HEADER ENDS ||******** -->
+    
+    <section class="inner-page-banner-sec" style="background-image: url(./assets/images/banner-1.jpg);">
+        <div class="banner-text">
+            <div class="heading">
+               Courses <span class="bold-text"></span>
+            </div>
+
+        </div>
+    </section>
+
+
+
+    <section class="all-page">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Courses</li>
+                        </ol>
+                      </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    	<!-- ********|| Detailed Features start||*******-->
+	<section class="detailed-accordion">
+		<div class="container">
+			<div class="features-title">
+                <div class="title-box">
+                    <h3 class="title">Computer Courses</h3>
+                </div>
+			</div>
+			<div class="row my-2">
+				<div class="col-md-12">
+					<div class="accordion">
+						<div class="accordion-item ">
+							<div class="accordion-title js-accordion-title">
+								
+								<div class="accordion-text">
+									<h3>3 Months Courses</h3>
+								</div>
+							</div>
+							<div class="accordion-content">
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">3MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">3MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">3MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item ">
+							<div class="accordion-title js-accordion-title">
+								
+								<div class="accordion-text">
+									<h3>6 Months Courses</h3>
+								</div>
+							</div>
+							<div class="accordion-content">
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">6 MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">6 MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+								
+							</div>
+						</div>
+						<div class="accordion-item ">
+							<div class="accordion-title js-accordion-title">
+								
+								<div class="accordion-text">
+									<h3>12 Months Courses</h3>
+								</div>
+							</div>
+							<div class="accordion-content">
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">12 MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">12 MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+							
+							</div>
+						</div>
+						<div class="accordion-item ">
+							<div class="accordion-title js-accordion-title">
+								
+								<div class="accordion-text">
+									<h3>14 Months Courses</h3>
+								</div>
+							</div>
+							<div class="accordion-content">
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">14 MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">14 MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+								
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- ********|| Detailed Features End||*******-->
+    	<!-- ********|| Detailed Features start||*******-->
+	<section class="detailed-accordion">
+		<div class="container">
+			<div class="features-title">
+                <div class="title-box">
+                    <h3 class="title">Vocational Courses</h3>
+                </div>
+			</div>
+			<div class="row my-2">
+				<div class="col-md-12">
+					<div class="accordion">
+						<div class="accordion-item ">
+							<div class="accordion-title js-accordion-title">
+								
+								<div class="accordion-text">
+									<h3>3 Months Courses</h3>
+								</div>
+							</div>
+							<div class="accordion-content">
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">3MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">3MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">3MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+							</div>
+						</div>
+						<div class="accordion-item ">
+							<div class="accordion-title js-accordion-title">
+								
+								<div class="accordion-text">
+									<h3>6 Months Courses</h3>
+								</div>
+							</div>
+							<div class="accordion-content">
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">6 MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">6 MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+								
+							</div>
+						</div>
+						<div class="accordion-item ">
+							<div class="accordion-title js-accordion-title">
+								
+								<div class="accordion-text">
+									<h3>12 Months Courses</h3>
+								</div>
+							</div>
+							<div class="accordion-content">
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">12 MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">12 MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+							
+							</div>
+						</div>
+						<div class="accordion-item ">
+							<div class="accordion-title js-accordion-title">
+								
+								<div class="accordion-text">
+									<h3>14 Months Courses</h3>
+								</div>
+							</div>
+							<div class="accordion-content">
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">14 MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+								<div class="accor-des">
+									<div class="item">
+                                        <div class="label">COURSE CODE</div>
+                                        <div class="data">MGYCE.M.A.C60</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">COURSE NAME</div>
+                                        <div class="data">MAKEUP ARTIST COURSE</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">DURATION</div>
+                                        <div class="data">14 MONTHS</div>
+                                    </div>
+									<div class="item">
+                                        <div class="label">CONTENT</div>
+                                        <div class="data">HD MAKEUP,NON HD MAKEUP,PARTY MAKEUP,DIFFERENT TYPES OF EYEMAKEUP(HAND ON PRACTICE),KNOWLEDGE ABOUT DIFFERENT TYPES OF SKIN,BRUSH KNOWLEDGE AND THEIR USES,DIFFERENT WAYS OF MAKEUP PROCESS,PRODUCT KNOWKEDGE AND THEIR USES, COLOUR THEORY,DEMONSTRATION (HD,NON HD),BENGALI AND NON BENGALI BRIDE GROOMONG, DIFFERENT HAIR STYLES,SAREE AND LAHENG DRAPING,SELF GROOMING.</div>
+                                    </div>
+
+
+
+								</div>
+								
+							</div>
+						</div>
+						
+					</div>
+				</div>
+				
+			</div>
+		</div>
+	</section>
+	<!-- ********|| Detailed Features End||*******-->
+
+    <!--    /* ********||FOOTER SECTION START||******** *-->
+    <footer class="foot-sec bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-6">
+                    <div class="text-box">
+                        <a href="index.html"><img src="assets/images/footer-logo.png" title="logo" alt="..."></a>
+                        <ul class="foot-item">
+                            <li class="item-content"><a href="#" class="btn-action"><i class="fal fa-phone-alt"></i>Call
+                                    Now: 7872836400</a></li>
+                            <li class="item-content"><a href="#" class="btn-action">Student helpline No: 8927581756
+                                </a></li>
+                            <li class="item-content"><a href="#" class="btn-action">
+                                    Study centre or franchise: +917872835900</a></li>
+                            <li class="item-content"><a href="#" class="btn-action"><i
+                                        class="fal fa-envelope"></i>mgyceindia@gmail.com</a></li>
+                            <li class="item-content"><a href="#" class="btn-action"><i
+                                        class="fal fa-map-marker-alt"></i>B.F ROAD, BHANGAPOOL
+                                    ALIPURDUAR, WEST BENGAL</a></li>
+                        </ul>
+                    </div>
+                    <div class="icon-box">
+                        <ul class="item-icon">
+                            <li class="item-bar"><a href="#" class="icon-btn"><i class="fab fa-facebook-f"></i></a></li>
+                            <li class="item-bar"><a href="#" class="icon-btn"><i class="fab fa-twitter"></i></a></li>
+                            <li class="item-bar"><a href="#" class="icon-btn"><i class="fab fa-whatsapp"></i></a></li>
+                            <li class="item-bar"><a href="#" class="icon-btn"><i class="fab fa-pinterest-p"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="menu-box">
+                        <h5 class="item-title">Courses</h5>
+                        <ul class="menu-item">
+                            <li class="item-nav"><a href="courses.html" class="btn-nav">Computer Courses</a>
+                            </li>
+                            <li class="item-nav"><a href="courses.html" class="btn-nav">Vocation Courses</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="menu-box">
+                        <h5 class="item-title">Infomation</h5>
+                        <ul class="menu-item">
+                            <li class="item-nav"><a href="registration.html" class="btn-nav">Student Registration</a></li>
+                            <li class="item-nav"><a href="result.html" class="btn-nav">View Result</a></li>
+                            <li class="item-nav"><a href="profile.html" class="btn-nav">View Profile</a></li>
+                            <li class="item-nav"><a href="gallery.html" class="btn-nav">Gallery</a></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-6">
+                    <div class="menu-box">
+                        <h5 class="item-title">Useful links</h5>
+                        <ul class="menu-item">
+                            <li class="item-nav"><a href="about-us.html" class="btn-nav">About Us</a></li>
+                            <li class="item-nav"><a href="contact-us.html" class="btn-nav">Contact Us</a></li>
+                            <li class="item-nav"><a href="centers.html" class="btn-nav">Student Corner</a></li>
+                            <li class="item-nav"><a href="franchise.html" class="btn-nav">Franchise</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
+    <!--    /* ********||  FOOTER SECTION END||******** *-->
+    <!--    /* ********||  COPY RIGHT SECTION START||******** *-->
+    <section class="copy-right bg-gray">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="text-box">
+                        <h6>© Copyright APJ Computer Education Center 2022 • All rights reserved</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--    /* ********||  COPY RIGHT SECTION END||******** *-->
+
+
+
+
+
+
+
+    <!-- ********|| STYLESHEETS STARTS ||******** -->
+    <link href="assets/lib/bootstrap4/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/animate.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/lib/fontawesome5-all/css/all.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="assets/owl/owl3.css">
+    <!--
+<link href="assets/lib/owl-carousel/owl.carousel.min.css" rel="stylesheet" type="text/css">
+<link href="assets/lib/owl-carousel/owl.theme.min.css" rel="stylesheet" type="text/css">
+-->
+    <link href="assets/lib/fancybox/jquery.fancybox.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css">
+    <!-- ********|| STYLESHEETS ENDS ||******** -->
+    <!-- ********|| JAVASCRIPTS STARTS ||******** -->
+    <script type="text/javascript" src="assets/lib/jQuery/jquery-3.3.1.js"></script>
+    <script defer="defer" type="text/javascript" src="assets/lib/bootstrap4/popper.min.js"></script>
+    <script defer="defer" type="text/javascript" src="assets/lib/bootstrap4/bootstrap.js"></script>
+    <script src="assets/owl/owl-min.js"></script>
+    <!--<script defer="defer" type="text/javascript" src="assets/lib/owl-carousel/owl.carousel.min.js"></script>-->
+    <script defer="defer" type="text/javascript" src="assets/lib/fancybox/jquery.fancybox.min.js"></script>
+    <script defer="defer" type="text/javascript" src="assets/js/script.js"></script>
+    <script defer="defer" type="text/javascript" src="assets/js/products.js"></script>
+    <!-- ********|| JAVASCRIPTS ENDS ||******** -->
+    <!-- ********|| ONPAGE JAVASCRIPTS STARTS ||******** -->
+    <script defer="defer" type="text/javascript">
+        $(document).ready(function () {
+
+        });
+    </script>
+
+    <!-- ********|| ONPAGE JAVASCRIPTS ENDS ||******** -->
+</body>
+
+</html>
