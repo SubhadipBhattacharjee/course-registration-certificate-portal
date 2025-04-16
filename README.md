@@ -27,3 +27,8 @@ https://www.akyce.com/
 - **jQuery –** Simplified JavaScript DOM manipulation
 - **JS DataTable –** Paginated, searchable, and sortable tables
 - **SweetAlert2 –** Modern and responsive alert dialogs
+
+## Installation
+1. Clone the repository:  
+   ```bash
+   git clone https://github.com/SubhadipBhattacharjee/course-registration-certificate-portal.git
