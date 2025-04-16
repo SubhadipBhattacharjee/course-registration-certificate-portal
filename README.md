@@ -1,7 +1,8 @@
 ## 🎓 Course Registration & Certificate Portal
 This is a web-based platform for managing computer software and hardware-related courses. The platform allows candidates to register for courses, make payments through Razorpay Payment Gateway, and download certificates after successful completion. Admins can manage courses and students efficiently via an optimized backend.
 
-Live Link :-   https://www.akyce.com/
+## Live Link :-   
+https://www.akyce.com/
 
 ## ✨ Features
 
