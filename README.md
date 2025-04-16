@@ -5,14 +5,14 @@ Live Link :-   https://www.akyce.com/
 
 ## ✨ Features
 
--🧑‍🎓 Student registration for courses
--💳 Razorpay payment integration for secure transactions
--📜 Certificate download after course completion
--📚 Course listing with details and pricing
--📈 Optimized database and code for fast performance
--🛠️ Admin management for courses and students
--📅 Course timeline and status tracking
--🧾 Responsive UI with SweetAlert2 for alerts and JS DataTable for smart data display
+- 🧑‍🎓 Student registration for courses
+- 💳 Razorpay payment integration for secure transactions
+- 📜 Certificate download after course completion
+- 📚 Course listing with details and pricing
+- 📈 Optimized database and code for fast performance
+- 🛠️ Admin management for courses and students
+- 📅 Course timeline and status tracking
+- 🧾 Responsive UI with SweetAlert2 for alerts and JS DataTable for smart data display
 
 
 ## 🧰 Tech Stack
